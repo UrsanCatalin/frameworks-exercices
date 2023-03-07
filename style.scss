@@ -1,0 +1,104 @@
+$background-color: #333;
+$border-color: whitesmoke;
+$light: white;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-color;
+    display: flex; // contet spans the entire page
+    flex-direction: column; // elements flow from top to bottom;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    color: whitesmoke;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+span {
+    color: $light;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    align-items: center; // vertical align
+    justify-content: center; // horizontal align
+}
+
+#nav-logo-section>a>i {
+    font-size: 2.5rem;
+}
+
+
+nav>.nav-section {
+    padding: 3rem 2rem;
+    display: flex;
+    gap: 1rem;
+    border-left: 1px solid $border-color;
+    color: white;
+}
+
+#nav-logo-section {
+    justify-content: flex-start;
+
+}
+
+#nav-logo-section,
+#nav-link-section {
+
+    flex-basis: calc(100% / 3);
+
+}
+
+#nav-social-section,
+#nav-contact-section {
+    flex-grow: 1;
+}
+
+#nav-social-section {
+    gap: 3rem;
+}
+
+#nav-social-section,
+#nav-contact-section {
+    flex: arow 1;
+}
+
+main {
+    flex-grow: 1;
+}
+
+main>article {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+main>article>.article-section {
+    height: 100%;
+    // border: 1px solid $border-color;
+}
+
+main>article>.article-description-section,
+main>article>.article-nav-section {
+    border-left: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+}
